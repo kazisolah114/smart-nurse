@@ -9,7 +9,7 @@ const Sidebar = () => {
     const pathname = usePathname();
     const navItems = [
         { name: "Dashboard", href: "/dashboard", icon: Home },
-        { name: "Patients", href: "/patients", icon: Users2 },
+        { name: "Patients", href: "/dashboard/patients", icon: Users2 },
         { name: "AI Assistant", href: "/dashboard/assistant", icon: MessageSquare },
         { name: "Documentation", href: "/dashboard/documentation", icon: FileText },
         { name: "Medications", href: "/dashboard/medications", icon: Clock },
