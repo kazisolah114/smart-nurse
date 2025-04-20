@@ -19,7 +19,7 @@ const Header = () => {
                 </Button>
                 <div className="flex items-center gap-3">
                     <Avatar>
-                        <AvatarImage src="/placeholder.svg?height=40&width=40" alt="User" />
+                        <AvatarImage src="" alt="User" />
                         <AvatarFallback size="1px"></AvatarFallback>
                     </Avatar>
                     <div className="hidden lg:block">
