@@ -134,9 +134,9 @@ const DashboardPage = () => {
             </section>
             <section className="grid grid-cols-1 md:grid-cols-12 gap-4 mt-10">
                 {/* Patient Overview */}
-                <div className="border p-4 col-span-12 md:col-span-8 rounded-md">
+                <div className="bg-white border p-4 col-span-12 md:col-span-8 rounded-md">
                     <div className='flex items-center justify-between'>
-                        <h3 className='flex items-center gap-3 text-lg text-gray-900 font-semibold'><span className='bg-emerald-600/20 text-emerald-600 rounded-full w-8 h-8 flex items-center justify-center'><Users className='w-5 h-5' /></span> Patient Overview</h3>
+                        <h3 className='flex items-center gap-3 text-lg text-gray-900 font-semibold'><span className='bg-emerald-600/20 text-emerald-600 rounded-full w-8 h-8 flex items-center justify-center'><Users className='w-4 h-4' /></span> Patient Overview</h3>
                         <Button variant={"ghost"} className={"cursor-pointer text-gray-800 flex items-center gap-2"}>View all <ChevronRight className='w-5 h-5' /></Button>
                     </div>
                     <div className='mt-5 grid grid-cols-2 gap-3'>
@@ -197,9 +197,9 @@ const DashboardPage = () => {
                     </div>
                 </div>
                 {/* Medication summary */}
-                <div className="border p-4 col-span-12 md:col-span-4 rounded-md">
+                <div className="bg-white border p-4 col-span-12 md:col-span-4 rounded-md">
                     <div className=''>
-                        <h3 className='flex items-center gap-3 text-lg text-gray-900 font-semibold'><span className='bg-rose-600/20 text-rose-600 rounded-full w-8 h-8 flex items-center justify-center'><Pill className='w-5 h-5' /></span> Medication Summary</h3>
+                        <h3 className='flex items-center gap-3 text-lg text-gray-900 font-semibold'><span className='bg-rose-600/20 text-rose-600 rounded-full w-8 h-8 flex items-center justify-center'><Pill className='w-4 h-4' /></span> Medication Summary</h3>
                     </div>
                     <div className="pt-4">
                         <div className="flex justify-center mb-4">
@@ -251,9 +251,9 @@ const DashboardPage = () => {
                     </div>
                 </div>
                 {/* Upcoming Tasks */}
-                <div className="border p-4 col-span-12 md:col-span-8 rounded-md">
+                <div className="bg-white border p-4 col-span-12 md:col-span-8 rounded-md">
                     <div className='flex items-center justify-between'>
-                        <h3 className='flex items-center gap-3 text-lg text-gray-900 font-semibold'><span className='bg-purple-600/20 text-purple-600 rounded-full w-8 h-8 flex items-center justify-center'><Clipboard className='w-5 h-5' /></span> Upcoming Tasks</h3>
+                        <h3 className='flex items-center gap-3 text-lg text-gray-900 font-semibold'><span className='bg-purple-600/20 text-purple-600 rounded-full w-8 h-8 flex items-center justify-center'><Clipboard className='w-4 h-4' /></span> Upcoming Tasks</h3>
                         <Button variant={"ghost"} className={"cursor-pointer text-gray-800 flex items-center gap-2"}>View schedule <ChevronRight className='w-5 h-5' /></Button>
                     </div>
                     <div className="mt-5">
@@ -287,9 +287,9 @@ const DashboardPage = () => {
                     </div>
                 </div>
                 {/* Shift summary */}
-                <div className="border p-4 col-span-12 md:col-span-4 rounded-md max-h-max">
+                <div className="bg-white border p-4 col-span-12 md:col-span-4 rounded-md max-h-max">
                     <div className="">
-                        <h3 className='flex items-center gap-3 text-lg text-gray-900 font-semibold'><span className='bg-teal-600/20 text-teal-600 rounded-full w-8 h-8 flex items-center justify-center'><BarChart3 className='w-5 h-5' /></span> Shift Summary</h3>
+                        <h3 className='flex items-center gap-3 text-lg text-gray-900 font-semibold'><span className='bg-teal-600/20 text-teal-600 rounded-full w-8 h-8 flex items-center justify-center'><BarChart3 className='w-4 h-4' /></span> Shift Summary</h3>
                     </div>
                     <div className="mt-5">
                         <div className="space-y-4">

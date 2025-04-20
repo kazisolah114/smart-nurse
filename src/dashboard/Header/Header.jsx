@@ -7,7 +7,7 @@ import { Bell } from 'lucide-react';
 const Header = () => {
     const [notifications, setNotifications] = useState(3)
     return (
-        <header className='flex px-3 py-4 border-b'>
+        <header className='flex px-5 py-4 border-b h-max sticky top-0 bg-white z-10'>
             <div className="ml-auto flex items-center gap-4">
                 <Button size="icon" variant="ghost" className="relative cursor-pointer" onClick={() => setNotifications(0)}>
                     <Bell className="h-5 w-5" />
@@ -18,9 +18,9 @@ const Header = () => {
                     )}
                 </Button>
                 <div className="flex items-center gap-3">
-                    <Avatar>
+                    <Avatar className={"w-9 h-9"}>
                         <AvatarImage src="" alt="User" />
-                        <AvatarFallback size="1px"></AvatarFallback>
+                        <AvatarFallback>S</AvatarFallback>
                     </Avatar>
                     <div className="hidden lg:block">
                         <p className="text-sm font-medium">Sarah Nurse</p>
