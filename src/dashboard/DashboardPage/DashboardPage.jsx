@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
-import { Activity, Calendar, ChevronRight, Clock, Heart, MessageCircle, TrendingUp, Users } from 'lucide-react';
+import { Activity, BarChart3, Calendar, CheckCircle, ChevronRight, Clipboard, Clock, Heart, MessageCircle, PieChart, Pill, TrendingUp, Users } from 'lucide-react';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { AvatarImage } from '@radix-ui/react-avatar';
 
@@ -74,6 +74,32 @@ const DashboardPage = () => {
             nextCheckup: "2025-04-20T14:00:00Z"
         }
     ];
+    const tasks = [
+        {
+            title: "Medication Round",
+            status: "Upcoming",
+            description: "Administer scheduled medications to patients in rooms 302-310",
+            time: "11:00 AM"
+        },
+        {
+            title: "Team Huddle",
+            status: "Upcoming",
+            description: "Daily team meeting to discuss patient status and care plans",
+            time: "12:30 PM"
+        },
+        {
+            title: "Patient Discharge - Room 310",
+            status: "Upcoming",
+            description: "Complete discharge paperwork and patient education",
+            time: "2:00 PM"
+        },
+        {
+            title: "Documentation Update",
+            status: "Upcoming",
+            description: "Update patient charts and care documentation",
+            time: "3:30 PM"
+        }
+    ];
 
     return (
         <>
@@ -107,7 +133,8 @@ const DashboardPage = () => {
                 </div>
             </section>
             <section className="grid grid-cols-1 md:grid-cols-12 gap-4 mt-10">
-                <div className="border p-4 col-span-12 md:col-span-8">
+                {/* Patient Overview */}
+                <div className="border p-4 col-span-12 md:col-span-8 rounded-md">
                     <div className='flex items-center justify-between'>
                         <h3 className='flex items-center gap-3 text-lg text-gray-900 font-semibold'><span className='bg-emerald-600/20 text-emerald-600 rounded-full w-8 h-8 flex items-center justify-center'><Users className='w-5 h-5' /></span> Patient Overview</h3>
                         <Button variant={"ghost"} className={"cursor-pointer text-gray-800 flex items-center gap-2"}>View all <ChevronRight className='w-5 h-5' /></Button>
@@ -169,9 +196,154 @@ const DashboardPage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="border p-4 col-span-12 md:col-span-4">Medication Summary</div>
-                <div className="border p-4 col-span-12 md:col-span-8">Upcoming Tasks</div>
-                <div className="border p-4 col-span-12 md:col-span-4">Shift Summary</div>
+                {/* Medication summary */}
+                <div className="border p-4 col-span-12 md:col-span-4 rounded-md">
+                    <div className=''>
+                        <h3 className='flex items-center gap-3 text-lg text-gray-900 font-semibold'><span className='bg-rose-600/20 text-rose-600 rounded-full w-8 h-8 flex items-center justify-center'><Pill className='w-5 h-5' /></span> Medication Summary</h3>
+                    </div>
+                    <div className="pt-4">
+                        <div className="flex justify-center mb-4">
+                            <div className="relative h-40 w-40">
+                                <PieChart className="h-full w-full text-gray-200" />
+                                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                                    <span className="text-3xl font-bold">24</span>
+                                    <span className="text-sm text-gray-500">Total Doses</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-3">
+                            <div className="bg-green-50 rounded-lg p-3">
+                                <p className="text-base mb-1 text-green-600 flex items-center gap-2"><CheckCircle className='w-4 h-4' /> Administered</p>
+                                <p className="text-xl font-bold">14</p>
+                            </div>
+                            <div className="bg-amber-50 rounded-lg p-3">
+                                <p className="text-base mb-1 text-amber-600 flex items-center gap-2"><Clock className='w-4 h-4' /> Pending</p>
+                                <p className="text-xl font-bold">10</p>
+                            </div>
+                        </div>
+
+                        <div className="mt-4">
+                            <h4 className="text-sm font-medium mb-2">Next Medications</h4>
+                            <div className="space-y-2">
+                                <div className="flex justify-between items-center p-2 bg-amber-50 rounded-md">
+                                    <div>
+                                        <p className="font-medium">Insulin</p>
+                                        <p className="text-xs text-gray-500">John Doe - Room 302</p>
+                                    </div>
+                                    <div className="text-right">
+                                        <p className="text-sm font-medium">11:00 AM</p>
+                                        <p className="text-xs text-amber-600">In 18 min</p>
+                                    </div>
+                                </div>
+                                <div className="flex justify-between items-center p-2 bg-amber-50 rounded-md">
+                                    <div>
+                                        <p className="font-medium">Albuterol</p>
+                                        <p className="text-xs text-gray-500">Maria Garcia - Room 305</p>
+                                    </div>
+                                    <div className="text-right">
+                                        <p className="text-sm font-medium">11:30 AM</p>
+                                        <p className="text-xs text-amber-600">In 48 min</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* Upcoming Tasks */}
+                <div className="border p-4 col-span-12 md:col-span-8 rounded-md">
+                    <div className='flex items-center justify-between'>
+                        <h3 className='flex items-center gap-3 text-lg text-gray-900 font-semibold'><span className='bg-purple-600/20 text-purple-600 rounded-full w-8 h-8 flex items-center justify-center'><Clipboard className='w-5 h-5' /></span> Upcoming Tasks</h3>
+                        <Button variant={"ghost"} className={"cursor-pointer text-gray-800 flex items-center gap-2"}>View schedule <ChevronRight className='w-5 h-5' /></Button>
+                    </div>
+                    <div className="mt-5">
+                        <ul className='flex flex-col gap-2 mb-5'>
+                            {
+                                tasks.map((task, index) => {
+                                    return (
+                                        <li key={index} className="border rounded-md p-3 flex justify-between items-center">
+                                            <div className="flex items-start gap-3">
+                                                <div className={`h-3 w-3 rounded-full mt-1.5 bg-red-400`} />
+                                                <div>
+                                                    <div className="flex items-center gap-2">
+                                                        <p className="font-medium">{task.title}</p>
+                                                        <span className={`text-xs px-2 py-0.5 rounded-full bg-slate-200`}>Upcoming</span>
+                                                    </div>
+                                                    <p className="text-sm text-gray-500 mt-1">{task.description}</p>
+                                                </div>
+                                            </div>
+                                            <div className="justify-end text-right">
+                                                <p className="font-medium">{task.time}</p>
+                                                <Button variant="outline" size="sm" className="cursor-pointer mt-1 h-7 px-2 ">
+                                                    <CheckCircle className="h-4 w-4 mr-1" />
+                                                    Complete
+                                                </Button>
+                                            </div>
+                                        </li>
+                                    )
+                                })
+                            }
+                        </ul>
+                    </div>
+                </div>
+                {/* Shift summary */}
+                <div className="border p-4 col-span-12 md:col-span-4 rounded-md max-h-max">
+                    <div className="">
+                        <h3 className='flex items-center gap-3 text-lg text-gray-900 font-semibold'><span className='bg-teal-600/20 text-teal-600 rounded-full w-8 h-8 flex items-center justify-center'><BarChart3 className='w-5 h-5' /></span> Shift Summary</h3>
+                    </div>
+                    <div className="mt-5">
+                        <div className="space-y-4">
+                            <div className="flex items-center justify-between text-sm">
+                                <span className="text-gray-500">Shift Completion</span>
+                                <span className="font-medium">31%</span>
+                            </div>
+                            <Progress value={31} className="h-2" />
+
+                            <div className="grid grid-cols-2 gap-3 mt-4">
+                                <div className="bg-gray-50 rounded-lg p-3">
+                                    <div className="flex items-center gap-2">
+                                        <CheckCircle className="h-4 w-4 text-green-500" />
+                                        <span className="text-base">Completed</span>
+                                    </div>
+                                    <p className="text-xl font-bold mt-1">8</p>
+                                </div>
+                                <div className="bg-gray-50 rounded-lg p-3">
+                                    <div className="flex items-center gap-2">
+                                        <Clock className="h-4 w-4 text-amber-500" />
+                                        <span className="text-base">Pending</span>
+                                    </div>
+                                    <p className="text-xl font-bold mt-1">6</p>
+                                </div>
+                            </div>
+
+                            <div className="space-y-3 mt-4">
+                                <div className="space-y-2">
+                                    <div className="flex justify-between ">
+                                        <span className="text-gray-600">Documentation</span>
+                                        <span className="font-medium">85%</span>
+                                    </div>
+                                    <Progress value={85} className="h-1.5" />
+                                </div>
+
+                                <div className="space-y-2">
+                                    <div className="flex justify-between ">
+                                        <span className="text-gray-600">Medication Administration</span>
+                                        <span className="font-medium">70%</span>
+                                    </div>
+                                    <Progress value={70} className="h-1.5" />
+                                </div>
+
+                                <div className="space-y-2">
+                                    <div className="flex justify-between ">
+                                        <span className="text-gray-600">Patient Assessments</span>
+                                        <span className="font-medium">60%</span>
+                                    </div>
+                                    <Progress value={60} className="h-1.5" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </>
     );
