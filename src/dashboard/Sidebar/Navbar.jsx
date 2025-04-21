@@ -5,7 +5,7 @@ import { Calendar, Clock, FileQuestion, FileText, Home, MessageSquare, Search, S
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
-const Navbar = () => {
+const Navbar = ({ setShowSidebar }) => {
     const pathname = usePathname();
     const navItems = [
         { name: "Dashboard", href: "/dashboard", icon: Home },
@@ -25,7 +25,7 @@ const Navbar = () => {
                     const Icon = nav.icon;
                     const isActive = pathname === nav.href;
                     return (
-                        <li key={index} className=''>
+                        <li key={index} onClick={() => setShowSidebar(false)}>
                             <Link href={nav.href} className='cursor-pointer'>
                                 <Button variant={isActive ? "secondary" : "ghost"} size={"lg"} className={"w-full justify-start cursor-pointer"}>
                                     <Icon className='w-5 h-5 mr-2' />
@@ -41,7 +41,7 @@ const Navbar = () => {
                     const Icon = nav.icon;
                     const isActive = pathname === nav.href;
                     return (
-                        <li key={index} className=''>
+                        <li key={index} onClick={() => setShowSidebar(false)}>
                             <Link href={nav.href} className='cursor-pointer'>
                                 <Button variant={isActive ? "secondary" : "ghost"} size={"lg"} className={"w-full justify-start cursor-pointer"}>
                                     <Icon className='w-5 h-5 mr-2' />

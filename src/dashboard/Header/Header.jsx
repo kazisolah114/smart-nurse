@@ -3,8 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Bell, Menu, X } from 'lucide-react';
-import { usePathname } from 'next/navigation';
-import { Calendar, Clock, FileQuestion, FileText, Home, LogOut, MessageSquare, Search, Settings, Shield, Users2 } from 'lucide-react';
+import { LogOut, Shield } from 'lucide-react';
 import Navbar from '../Sidebar/Navbar';
 
 const Header = () => {
@@ -28,7 +27,7 @@ const Header = () => {
                     className="relative cursor-pointer"
                     onClick={() => setNotifications(0)}
                 >
-                    <Bell className="h-5 w-5" />
+                    <Bell className="h-6 w-6" />
                     {notifications > 0 && (
                         <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                             {notifications}
@@ -50,7 +49,7 @@ const Header = () => {
                 {/* Mobile menu button */}
                 <div className="lg:hidden">
                     <button onClick={() => setShowSidebar(true)}>
-                        <Menu className="w-5 h-5" />
+                        <Menu className="w-6 h-6" />
                     </button>
                 </div>
             </div>
@@ -76,9 +75,9 @@ const Header = () => {
                     </button>
                 </div>
 
-                <Navbar />
+                <Navbar setShowSidebar={setShowSidebar} />
 
-                <div className="mt-auto border-t p-2">
+                <div className="mt-auto border-t p-2 -mb-16">
                     <Button
                         variant="ghost"
                         size="lg"
