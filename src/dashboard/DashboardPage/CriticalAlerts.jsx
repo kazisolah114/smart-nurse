@@ -35,15 +35,15 @@ const CriticalAlerts = () => {
                 {
                     alerts.map((alert, index) => {
                         return (
-                            <li key={index} className={`flex items-center justify-between rounded-md p-3 border ${alert.importance == "warning" ? "bg-yellow-400/10 border-yellow-400/40" : "bg-red-400/10 border-red-400/40"}`}>
+                            <li key={index} className={`flex max-sm:flex-col max-sm:gap-2 sm:items-center justify-between rounded-md p-3 border ${alert.importance == "warning" ? "bg-yellow-400/10 border-yellow-400/40" : "bg-red-400/10 border-red-400/40"}`}>
                                 <div className='flex items-start gap-3'>
-                                    <AlertCircle className={`w-5 h-5 ${alert.importance == "warning" ? "text-yellow-400/90" : "text-red-400/90"} relative top-1`} />
+                                    <AlertCircle className={`w-5 h-5 ${alert.importance == "warning" ? "text-yellow-400/90" : "text-red-400/90"} relative top-1 max-sm:hidden`} />
                                     <div>
-                                        <h4 className='font-semibold text-gray-900 mb-1'>{alert.alert}</h4>
-                                        <p>{alert.description}</p>
+                                        <h4 className='font-semibold max-sm:font-medium text-gray-900 mb-1'>{alert.alert}</h4>
+                                        <p className='max-sm:text-sm'>{alert.description}</p>
                                     </div>
                                 </div>
-                                <div className='text-right'>
+                                <div className='sm:text-right max-md:border-t max-md:pt-2'>
                                     <p className="text-sm mb-1">10 mins ago</p>
                                     <Button variant="outline" size="sm" className="cursor-pointer mt-1 h-7 px-2 ">
                                         <CheckCircle className="h-4 w-4 mr-1" />
