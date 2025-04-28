@@ -1,9 +1,10 @@
 import React from 'react';
+import DocumentationPage from '@/dashboard/DocumentationPage/DocumentationPage';
 
 const Documentation = () => {
     return (
         <div>
-            Documentation
+            <DocumentationPage />
         </div>
     );
 };

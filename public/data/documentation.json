@@ -1,0 +1,142 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "room": "302",
+      "age": 67,
+      "condition": "Diabetes Type 2",
+      "notes": [
+        {
+          "id": 101,
+          "title": "Morning Assessment",
+          "type": "Assessment",
+          "content": "Patient alert and oriented. Blood sugar levels monitored and stable.",
+          "date": "2023-05-15T08:30:00",
+          "author": "Sarah Nurse",
+          "actions": {
+            "edit": true,
+            "delete": true
+          }
+        },
+        {
+          "id": 102,
+          "title": "Medication Administration",
+          "type": "Medication",
+          "content": "Administered Metformin 500mg orally. No adverse reactions noted.",
+          "date": "2023-05-15T09:15:00",
+          "author": "Sarah Nurse",
+          "actions": {
+            "edit": true,
+            "delete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Maria Garcia",
+      "room": "305",
+      "age": 54,
+      "condition": "Pneumonia",
+      "notes": [
+        {
+          "id": 201,
+          "title": "Initial Assessment",
+          "type": "Assessment",
+          "content": "Patient experiencing shortness of breath and mild fever. Oxygen therapy initiated.",
+          "date": "2023-05-16T07:45:00",
+          "author": "Sarah Nurse",
+          "actions": {
+            "edit": true,
+            "delete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Robert Johnson",
+      "room": "215",
+      "age": 72,
+      "condition": "CHF",
+      "notes": [
+        {
+          "id": 301,
+          "title": "Daily Monitoring",
+          "type": "Assessment",
+          "content": "Weight and fluid intake recorded. Slight edema observed in lower limbs.",
+          "date": "2023-05-15T10:00:00",
+          "author": "Sarah Nurse",
+          "actions": {
+            "edit": true,
+            "delete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Emily Chen",
+      "room": "410",
+      "age": 29,
+      "condition": "Post-Op Recovery",
+      "notes": [
+        {
+          "id": 401,
+          "title": "Post-Surgical Check",
+          "type": "Assessment",
+          "content": "Surgical site clean with minimal drainage. Patient reports manageable pain levels.",
+          "date": "2023-05-17T09:30:00",
+          "author": "Sarah Nurse",
+          "actions": {
+            "edit": true,
+            "delete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "William Smith",
+      "room": "220",
+      "age": 45,
+      "condition": "Hypertension",
+      "notes": [
+        {
+          "id": 501,
+          "title": "Blood Pressure Monitoring",
+          "type": "Assessment",
+          "content": "BP checked at 140/90 mmHg. Advised lifestyle modifications and adherence to medication.",
+          "date": "2023-05-16T11:15:00",
+          "author": "Sarah Nurse",
+          "actions": {
+            "edit": true,
+            "delete": true
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Sofia Martinez",
+      "room": "218",
+      "age": 34,
+      "condition": "Asthma",
+      "notes": [
+        {
+          "id": 601,
+          "title": "Respiratory Assessment",
+          "type": "Assessment",
+          "content": "Patient shows improved breathing after nebulization treatment. No wheezing detected.",
+          "date": "2023-05-16T08:50:00",
+          "author": "Sarah Nurse",
+          "actions": {
+            "edit": true,
+            "delete": true
+          }
+        }
+      ]
+    }
+  ]
+}
