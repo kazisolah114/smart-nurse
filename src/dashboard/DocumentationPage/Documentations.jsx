@@ -6,29 +6,33 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Textarea } from '@/components/ui/textarea';
-import { Edit, Paperclip, Trash2 } from 'lucide-react';
+import { ArrowLeft, Edit, Paperclip, Trash2 } from 'lucide-react';
 
-const Documentations = ({ selectedPatient }) => {
+const Documentations = ({ selectedPatient, setSelectedPatient }) => {
     return (
-        <div className='col-span-8 bg-white rounded-md border p-3 '>
+        <div className={`col-span-8 ${selectedPatient ? '' : 'max-md:hidden'} bg-white rounded-md border p-3 `}>
             {
                 selectedPatient ?
                     <div>
                         <Tabs defaultValue="notes" className="space-y-4">
-                            <div className="flex items-center justify-between">
+                            <div className="flex sm:items-center sm:justify-between max-sm:flex-col max-sm:gap-4">
                                 <div>
-                                    <h5 className="font-semibold text-xl mb-1">{selectedPatient.name}</h5>
+                                    <div className='flex items-center gap-3 md:hidden'>
+                                        <Button variant={'outline'} onClick={() => setSelectedPatient(null)}><ArrowLeft className='w-5 h-5 text-grya-700' /></Button>
+                                        <h5 className="font-semibold text-xl max-sm:text-lg sm:mb-1">{selectedPatient.name}</h5>
+                                    </div>
+                                    <h5 className="max-md:hidden font-semibold text-xl max-sm:text-lg sm:mb-1">{selectedPatient.name}</h5>
                                     <p className="text-gray-600">
                                         Room {selectedPatient.room} • {selectedPatient.condition}
                                     </p>
                                 </div>
-                                <TabsList>
+                                <TabsList className={'max-sm:w-full'}>
                                     <TabsTrigger value="notes" className={"cursor-pointer"}>Notes</TabsTrigger>
                                     <TabsTrigger value="create" className={"cursor-pointer"}>Create Note</TabsTrigger>
                                 </TabsList>
                             </div>
 
-                            <div className='mt-3'>
+                            <div className='mt-2'>
                                 <TabsContent value="notes">
                                     {selectedPatient.notes.length ?
                                         <Table>

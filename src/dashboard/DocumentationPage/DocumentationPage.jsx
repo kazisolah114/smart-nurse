@@ -12,7 +12,7 @@ const DocumentationPage = () => {
         const handleFetchDocumentation = async () => {
             try {
                 const response = await axios.get('/data/documentation.json');
-                if(response.status === 200) {
+                if (response.status === 200) {
                     setPatients(response.data.patients);
                 }
             } catch (error) {
@@ -24,9 +24,9 @@ const DocumentationPage = () => {
     return (
         <div className=''>
             <FeatureHeader title={"Documentation"} description={"Manage patients notes & documentation"} />
-            <div className="grid grid-cols-12 gap-5">
-                <Patients patients={patients} setSelectedPatient={setSelectedPatient} />
-                <Documentations selectedPatient={selectedPatient} />
+            <div className="md:grid grid-cols-12 gap-5">
+                <Patients patients={patients} selectedPatient={selectedPatient} setSelectedPatient={setSelectedPatient} />
+                <Documentations selectedPatient={selectedPatient} setSelectedPatient={setSelectedPatient} />
             </div>
         </div>
     );

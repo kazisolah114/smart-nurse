@@ -1,9 +1,9 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 
-const Patients = ({ patients, setSelectedPatient }) => {
+const Patients = ({ patients,selectedPatient, setSelectedPatient }) => {
     return (
-        <div className='col-span-4 bg-white rounded-md border max-h-[calc(100vh-13rem)] overflow-auto'>
+        <div className={`col-span-4 bg-white rounded-md border md:max-h-[calc(100vh-13rem)] md:overflow-auto ${selectedPatient ? 'max-md:hidden' : ''}`}>
             <ul>
                 {
                     patients.map(patient => {
