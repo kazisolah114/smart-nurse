@@ -1,5 +1,5 @@
 import React from 'react';
-import { LogOut, Shield } from 'lucide-react';
+import { LogOut, PlusSquare, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Navbar from './Navbar';
 
@@ -7,7 +7,10 @@ const Sidebar = () => {
     return (
         <aside className='col-span-2 flex flex-col border-r h-screen sticky top-0 max-lg:hidden'>
             <div className='border-b py-[18px]'>
-                <h2 className='text-emerald-600 font-medium text-2xl flex items-center gap-2 px-3'><Shield className='h-6 w-6' /> Smart Nurse</h2>
+                {/* <h2 className='text-emerald-600 font-medium text-2xl flex items-center gap-2 px-3'><Shield className='h-6 w-6' /> Smart Nurse</h2> */}
+                <h2 className=" text-emerald-600 font-bold text-2xl flex items-center gap-2 px-3">
+                    <PlusSquare className="h-8 w-8" /> Smart Nurse
+                </h2>
             </div>
             <Navbar />
             <div className='mt-auto border-t p-2'>

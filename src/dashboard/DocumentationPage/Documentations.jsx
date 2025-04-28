@@ -6,7 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Textarea } from '@/components/ui/textarea';
-import { ArrowLeft, Edit, Paperclip, Trash2 } from 'lucide-react';
+import { ArrowLeft, Edit, FileText, Paperclip, Trash2 } from 'lucide-react';
 
 const Documentations = ({ selectedPatient, setSelectedPatient }) => {
     return (
@@ -103,7 +103,7 @@ const Documentations = ({ selectedPatient, setSelectedPatient }) => {
                     </div>
                     :
                     <div className='flex flex-col items-center justify-center h-full'>
-                        <Paperclip className='w-12 h-12 text-gray-500' />
+                        <FileText className='w-12 h-12 text-gray-500' />
                         <h4 className='font-semibold mt-3 mb-2 text-xl text-gray-900'>No Patient Selected</h4>
                         <p className='text-gray-700'>Select a patient from the list to view or create documentation</p>
                     </div>

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
-import { Bell, Menu, X } from 'lucide-react';
+import { Bell, Menu, PlusCircle, PlusSquare, X } from 'lucide-react';
 import { LogOut, Shield } from 'lucide-react';
 import Navbar from '../Sidebar/Navbar';
 
@@ -20,37 +20,42 @@ const Header = () => {
     const [notifications, setNotifications] = useState(3)
     return (
         <header className="flex px-5 py-4 border-b h-max sticky top-0 bg-white z-10">
-            <div className="ml-auto flex items-center gap-4">
-                <Button
-                    size="icon"
-                    variant="ghost"
-                    className="relative cursor-pointer"
-                    onClick={() => setNotifications(0)}
-                >
-                    <Bell className="h-6 w-6" />
-                    {notifications > 0 && (
-                        <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                            {notifications}
-                        </span>
-                    )}
-                </Button>
+            <div className='lg:ml-auto flex justify-between items-center w-full'>
+                <h2 className="lg:hidden text-emerald-600 font-semibold text-xl flex items-center gap-2">
+                    <PlusSquare className="h-7 w-7" /> Smart Nurse
+                </h2>
+                <div className="ml-auto flex items-center gap-4 relative top-1">
+                    <Button
+                        size="icon"
+                        variant="ghost"
+                        className="relative cursor-pointer"
+                        onClick={() => setNotifications(0)}
+                    >
+                        <Bell className="h-6 w-6" />
+                        {notifications > 0 && (
+                            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                                {notifications}
+                            </span>
+                        )}
+                    </Button>
 
-                <div className="flex items-center gap-3 max-lg:hidden">
-                    <Avatar className="w-9 h-9">
-                        <AvatarImage src="" alt="User" />
-                        <AvatarFallback>S</AvatarFallback>
-                    </Avatar>
-                    <div className="hidden lg:block">
-                        <p className="text-sm font-medium">Sarah Nurse</p>
-                        <p className="text-xs text-gray-500">RN, Emergency Department</p>
+                    <div className="flex items-center gap-3 max-lg:hidden">
+                        <Avatar className="w-9 h-9">
+                            <AvatarImage src="" alt="User" />
+                            <AvatarFallback>S</AvatarFallback>
+                        </Avatar>
+                        <div className="hidden lg:block">
+                            <p className="text-sm font-medium">Sarah Nurse</p>
+                            <p className="text-xs text-gray-500">RN, Emergency Department</p>
+                        </div>
                     </div>
-                </div>
 
-                {/* Mobile menu button */}
-                <div className="lg:hidden">
-                    <button onClick={() => setShowSidebar(true)}>
-                        <Menu className="w-6 h-6" />
-                    </button>
+                    {/* Mobile menu button */}
+                    <div className="lg:hidden">
+                        <button onClick={() => setShowSidebar(true)}>
+                            <Menu className="w-6 h-6" />
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -67,10 +72,10 @@ const Header = () => {
                     } flex flex-col`}
             >
                 <div className="border-b py-[18px] flex items-center justify-between px-3">
-                    <h2 className="text-emerald-600 font-medium text-2xl flex items-center gap-2">
-                        <Shield className="h-6 w-6" /> Smart Nurse
+                    <h2 className="lg:hidden text-emerald-600 font-semibold text-xl flex items-center gap-2">
+                        <PlusSquare className="h-7 w-7" /> Smart Nurse
                     </h2>
-                    <button onClick={() => setShowSidebar(false)}>
+                    <button onClick={() => setShowSidebar(false)} className='relative top-[2px]'>
                         <X className="h-5 w-5" />
                     </button>
                 </div>
