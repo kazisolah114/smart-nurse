@@ -5,7 +5,7 @@ import { Calendar, Clock, FileQuestion, FileText, Home, MessageSquare, Search, S
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
-const Navbar = ({ setShowSidebar }) => {
+const Navbar = ({ setShowSidebar = () => {} }) => {
     const pathname = usePathname();
     const navItems = [
         { name: "Dashboard", href: "/dashboard", icon: Home },
