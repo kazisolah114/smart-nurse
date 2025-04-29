@@ -2,10 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import FeatureHeader from '@/components/common/FeatureHeader';
 import { Input } from '@/components/ui/input';
-import { Calendar, CheckCircle, ChevronLeft, ChevronRight, Clock, Info, Search } from 'lucide-react';
+import { Calendar, CheckCircle, ChevronLeft, ChevronRight, Clock, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import axios from 'axios';
+import MedicationDetailsDialog from './MedicationDetailsDialog';
 
 const MedicationsPage = () => {
     const [medications, setMedications] = useState([]);
@@ -111,7 +112,7 @@ const MedicationsPage = () => {
                                                             </div>
                                                             <p className='text-gray-800 flex items-center gap-2'><Clock className='h-4 w-4' /> {medication.time}</p>
                                                         </div>
-                                                        <Button variant={'outline'} className={'cursor-pointer'}><Info className='w-5 h-5' /></Button>
+                                                        <MedicationDetailsDialog medication={medication} />
                                                     </li>
                                                 ))}
                                             </ul>
@@ -155,7 +156,7 @@ const MedicationsPage = () => {
                                                             </div>
                                                             <p className='text-gray-800 flex items-center gap-2'><Clock className='h-4 w-4' /> {medication.time}</p>
                                                         </div>
-                                                        <Button variant={'outline'} className={'cursor-pointer'}><Info className='w-5 h-5' /></Button>
+                                                        <MedicationDetailsDialog medication={medication} />
                                                     </li>
                                                 ))}
                                             </ul>
