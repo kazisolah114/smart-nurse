@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import axios from 'axios';
 import MedicationDetailsDialog from './MedicationDetailsDialog';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
 const MedicationsPage = () => {
     const [medications, setMedications] = useState([]);
@@ -168,7 +169,46 @@ const MedicationsPage = () => {
                             })()}
                         </TabsContent>
                         <TabsContent value="patient">Patients</TabsContent>
-                        <TabsContent value="medications">Medications</TabsContent>
+                        <TabsContent value="medications">
+                            <div className='bg-white border p-5 rounded-md mt-3'>
+                                <div className='mb-3'>
+                                    <h3 className='font-semibold sm:text-lg'>All Medications</h3>
+                                    <p className='text-gray-600'>Complete list of medications for all patients</p>
+                                </div>
+                                <Table>
+                                    <TableHeader>
+                                        <TableRow>
+                                            <TableHead className={'text-gray-600'}>#</TableHead>
+                                            <TableHead className={'text-gray-600'}>Patient</TableHead>
+                                            <TableHead className={'text-gray-600'}>Room</TableHead>
+                                            <TableHead className={'text-gray-600'}>Medication</TableHead>
+                                            <TableHead className={'text-gray-600'}>Dosage</TableHead>
+                                            <TableHead className={'text-gray-600'}>Time</TableHead>
+                                            <TableHead className={'text-gray-600'}>Status</TableHead>
+                                            <TableHead className={"text-gray-600 text-right"}>Actions</TableHead>
+                                        </TableRow>
+                                    </TableHeader>
+                                    <TableBody>
+                                        {medications.map((medication, index) => {
+                                            return (
+                                                <TableRow key={index}>
+                                                    <TableCell>{index + 1}</TableCell>
+                                                    <TableCell className={'font-medium'}>{medication.patient}</TableCell>
+                                                    <TableCell>{medication.room}</TableCell>
+                                                    <TableCell>{medication.medication}</TableCell>
+                                                    <TableCell>{medication.dosage}</TableCell>
+                                                    <TableCell>{medication.time}</TableCell>
+                                                    <TableCell><p className={`${medication.status === "Completed" ? 'bg-green-500/10 border border-green-500/30 text-green-700' : 'bg-yellow-500/10 border border-yellow-500/30 text-yellow-700'} mt-1 rounded-full px-3 text-sm w-max`}>{medication.status}</p></TableCell>
+                                                    <TableCell className={"text-right"}>
+                                                        <MedicationDetailsDialog medication={medication} />
+                                                    </TableCell>
+                                                </TableRow>
+                                            )
+                                        })}
+                                    </TableBody>
+                                </Table>
+                            </div>
+                        </TabsContent>
                     </div>
                 </Tabs>
             </div>
