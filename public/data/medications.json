@@ -1,0 +1,72 @@
+[
+    {
+        "patient": "John Doe",
+        "room": "302",
+        "medication": "Insulin",
+        "dosage": "10 units",
+        "time": "08:00",
+        "administration": "Subcutaneous injection",
+        "notes": "Administer after meal, monitor for hypoglycemia",
+        "status": "Completed"
+    },
+    {
+        "patient": "Maria Garcia",
+        "room": "305",
+        "medication": "Azithromycin",
+        "dosage": "250mg",
+        "time": "09:00",
+        "administration": "Oral tablet, may be taken with or without food",
+        "notes": "Monitor for gastrointestinal side effects",
+        "status": "Completed"
+    },
+    {
+        "patient": "Robert Johnson",
+        "room": "215",
+        "medication": "Furosemide",
+        "dosage": "40mg",
+        "time": "10:00",
+        "administration": "Oral tablet, take with water",
+        "notes": "Monitor blood pressure and electrolyte levels",
+        "status": "Completed"
+    },
+    {
+        "patient": "Robert Johnson",
+        "room": "215",
+        "medication": "Lisinopril",
+        "dosage": "10mg",
+        "time": "10:00",
+        "administration": "Oral tablet, take with or without food",
+        "notes": "Monitor blood pressure and kidney function",
+        "status": "Completed"
+    },
+    {
+        "patient": "John Doe",
+        "room": "302",
+        "medication": "Metformin",
+        "dosage": "500mg",
+        "time": "12:00",
+        "administration": "Oral tablet, to be taken with food",
+        "notes": "Monitor blood glucose levels 30 minutes after administration",
+        "status": "Scheduled"
+    },
+    {
+        "patient": "Maria Garcia",
+        "room": "305",
+        "medication": "Albuterol",
+        "dosage": "2 puffs",
+        "time": "14:00",
+        "administration": "Inhalation, shake well before use",
+        "notes": "Assess lung sounds before administration",
+        "status": "Scheduled"
+    },
+    {
+        "patient": "Robert Johnson",
+        "room": "218",
+        "medication": "Digoxin",
+        "dosage": "0.125mg",
+        "time": "18:00",
+        "administration": "Oral tablet, take with water",
+        "notes": "Check apical pulse before administration",
+        "status": "Scheduled"
+    }
+]

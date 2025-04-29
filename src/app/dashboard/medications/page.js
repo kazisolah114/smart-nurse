@@ -1,9 +1,10 @@
 import React from 'react';
+import MedicationsPage from '@/dashboard/MedicationsPage/MedicationsPage';
 
 const Medications = () => {
     return (
         <div>
-            Medications
+            <MedicationsPage />
         </div>
     );
 };
