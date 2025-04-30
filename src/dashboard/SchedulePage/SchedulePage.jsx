@@ -4,12 +4,20 @@ import DateActions from './DateActions';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import AddTaskDialog from './AddTaskDialog';
 import Tasks from '@/components/tasks/tasks';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Plus } from 'lucide-react';
+import Shifts from './Shifts';
+import { Button } from '@/components/ui/button';
+import AddShiftDialog from './AddShiftDialog';
 
 const SchedulePage = () => {
+    const currentDate = new Date().toLocaleDateString('en-US', {
+        weekday: 'long',
+        month: 'long',
+        day: 'numeric'
+    });
     return (
         <div>
-            <div className='flex items-center justify-between'>
+            <div className='flex sm:items-center sm:justify-between max-sm:flex-col'>
                 <FeatureHeader title={"Schedule"} description={"Manage your shifts and tasks"} />
                 <DateActions />
             </div>
@@ -17,11 +25,17 @@ const SchedulePage = () => {
                 <TabsList>
                     <TabsTrigger value="schedule" className={'cursor-pointer'}>Schedule</TabsTrigger>
                     <TabsTrigger value="tasks" className={'cursor-pointer'}>Tasks</TabsTrigger>
-                    <TabsTrigger value="calendar" className={'cursor-pointer'}>Calendar</TabsTrigger>
                 </TabsList>
                 <div className='bg-white rounded-md border p-3 mt-3'>
                     <TabsContent value="schedule">
-                        Schedule
+                        <div className='mb-6'>
+                            <h4 className='font-medium text-gray-900 mb-5'>{currentDate}</h4>
+                            <div className='p-5 rounded-md border flex flex-col items-center justify-center w-full gap-3'>
+                                <p className='text-gray-700 text-lg'>No shift scheduled for this day</p>
+                                <AddShiftDialog currentDate={currentDate} />
+                            </div>
+                        </div>
+                        <Shifts />
                     </TabsContent>
                     <TabsContent value="tasks">
                         <div className='flex items-center justify-between mb-3'>
@@ -53,9 +67,6 @@ const SchedulePage = () => {
                                 </TabsContent>
                             </div>
                         </Tabs>
-                    </TabsContent>
-                    <TabsContent value="calendar">
-                        Calendar
                     </TabsContent>
                 </div>
             </Tabs>

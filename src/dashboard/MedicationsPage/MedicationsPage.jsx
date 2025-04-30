@@ -32,7 +32,6 @@ const MedicationsPage = () => {
         med.medication.toLowerCase().includes(searchQuery.toLowerCase()) ||
         med.room.includes(searchQuery)
     )
-    console.log("Searched meds:", filteredMedications);
 
     // -------- Group medications by patient ------------ //
     const groupedByPatient = filteredMedications.reduce((acc, med) => {

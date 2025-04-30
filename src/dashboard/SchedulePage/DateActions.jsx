@@ -5,14 +5,14 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const DateActions = () => {
     return (
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 max-sm:mb-5 ">
             <div className='flex items-center gap-2'>
                 <Button variant={'outline'} className={'bg-white cursor-pointer'}><ChevronLeft className='w-5 h-5' /></Button>
                 <Button variant={'outline'} className={'bg-white cursor-pointer font-medium'}>Today</Button>
-                <Button variant={'outline'} className={'bg-white cursor-pointer'}><ChevronRight className='w-5 h-5' /></Button>
+                <Button variant={'outline'} className={'bg-white cursor-pointer '}><ChevronRight className='w-5 h-5' /></Button>
             </div>
-            <Select>
-                <SelectTrigger className={'bg-white cursor-pointer w-24 font-medium'}>
+            <Select defaultValue={'day'}>
+                <SelectTrigger className={'bg-white cursor-pointer font-medium w-24 max-sm:w-full'}>
                     <SelectValue placeholder="Week" />
                 </SelectTrigger>
                 <SelectContent>
