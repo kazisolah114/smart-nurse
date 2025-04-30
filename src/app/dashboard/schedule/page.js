@@ -1,9 +1,10 @@
 import React from 'react';
+import SchedulePage from '@/dashboard/SchedulePage/SchedulePage';
 
 const Schedule = () => {
     return (
         <div>
-            Schedule
+            <SchedulePage />
         </div>
     );
 };

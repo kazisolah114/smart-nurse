@@ -7,25 +7,29 @@ const Tasks = () => {
             title: "Medication Round",
             status: "Upcoming",
             description: "Administer scheduled medications to patients in rooms 302-310",
-            time: "11:00 AM"
+            time: "08:00",
+            duration: "1 hour"
         },
         {
             title: "Team Huddle",
             status: "Upcoming",
             description: "Daily team meeting to discuss patient status and care plans",
-            time: "12:30 PM"
+            time: "09:30",
+            duration: "30 minutes"
         },
         {
             title: "Patient Discharge - Room 310",
             status: "Upcoming",
             description: "Complete discharge paperwork and patient education",
-            time: "2:00 PM"
+            time: "14:00",
+            duration: "1 hour"
         },
         {
             title: "Documentation Update",
             status: "Upcoming",
             description: "Update patient charts and care documentation",
-            time: "3:30 PM"
+            time: "18:30",
+            duration: "1 hour"
         }
     ];
     return (

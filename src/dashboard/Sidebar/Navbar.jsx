@@ -5,7 +5,7 @@ import { Calendar, Clock, FileQuestion, FileText, Home, MessageSquare, Search, S
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
-const Navbar = ({ setShowSidebar = () => {} }) => {
+const Navbar = ({ setShowSidebar = () => { } }) => {
     const pathname = usePathname();
     const navItems = [
         { name: "Dashboard", href: "/dashboard", icon: Home },
@@ -13,8 +13,8 @@ const Navbar = ({ setShowSidebar = () => {} }) => {
         { name: "AI Assistant", href: "/dashboard/assistant", icon: MessageSquare },
         { name: "Documentation", href: "/dashboard/documentation", icon: FileText },
         { name: "Medications", href: "/dashboard/medications", icon: Clock },
-        { name: "Medical Reference", href: "/dashboard/reference", icon: Search },
         { name: "Schedule", href: "/dashboard/schedule", icon: Calendar },
+        { name: "Medical Reference", href: "/dashboard/reference", icon: Search },
         { name: "Settings", href: "/dashboard/settings", icon: Settings },
         { name: "Help Center", href: "/dashboard/help", icon: FileQuestion },
     ]
