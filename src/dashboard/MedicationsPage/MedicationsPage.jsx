@@ -24,9 +24,25 @@ const MedicationsPage = () => {
         }
         handleFetchMedications();
     }, [])
-    console.log(medications)
 
+    // Filtering medications based on search query
     const [searchQuery, setSearchQuery] = useState("");
+    const filteredMedications = medications?.filter(med => 
+        med.patient.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        med.medication.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        med.room.includes(searchQuery)
+    )
+    console.log("Searched meds:", filteredMedications);
+
+    // -------- Group medications by patient ------------ //
+    const groupedByPatient = filteredMedications.reduce((acc, med) => {
+        if (!acc[med.patient]) {
+            acc[med.patient] = [];
+        }
+        acc[med.patient].push(med);
+        return acc;
+    }, {});
+
     const [currentDate, setCurrentDate] = useState(new Date());
     const formatDate = (date) => {
         return date.toLocaleDateString('en-US', {
@@ -80,7 +96,7 @@ const MedicationsPage = () => {
                     <div>
                         <TabsContent value="timeline">
                             {(() => {
-                                const upcomingMedications = medications.filter(
+                                const upcomingMedications = filteredMedications.filter(
                                     medication => medication.status === "Scheduled"
                                 );
                                 return (
@@ -124,7 +140,7 @@ const MedicationsPage = () => {
                                 );
                             })()}
                             {(() => {
-                                const administeredMedications = medications.filter(
+                                const administeredMedications = filteredMedications.filter(
                                     medication => medication.status === "Completed"
                                 );
                                 return (
@@ -168,7 +184,36 @@ const MedicationsPage = () => {
                                 );
                             })()}
                         </TabsContent>
-                        <TabsContent value="patient">Patients</TabsContent>
+                        <TabsContent value="patient">
+                            {Object.entries(groupedByPatient).map(([patient, meds]) => (
+                                <div key={patient} className='bg-white border p-5 rounded-md mt-3'>
+                                    <div className='mb-3 flex items-center justify-between'>
+                                        <div>
+                                            <h3 className='font-semibold sm:text-lg'>{patient}</h3>
+                                            <p className='text-gray-600'>Number of medications {meds.length}</p>
+                                        </div>
+                                        <p className='border rounded-full px-2 bg-gray-50'>
+                                            Room {[...new Set(meds.map(med => med.room))].join(', ')}
+                                        </p>
+                                    </div>
+
+                                    <ul className='space-y-3'>
+                                        {meds.map((med, i) => (
+                                            <li key={i} className={`${med.status === "Completed" ? "bg-green-500/5 border border-green-500/50" : "bg-yellow-500/5 border border-yellow-500/50"} p-3 rounded-md flex items-center justify-between`}>
+                                                <div>
+                                                    <div className='flex items-center gap-3 mb-1'>
+                                                        <h5 className='font-semibold text-lg '>{med.medication}</h5>
+                                                        <p className='text-gray-700'>{med.dosage}</p>
+                                                    </div>
+                                                    <p className='flex items-center gap-2'><Clock className='w-4 h-4 text-gray-700' /> {med.time}</p>
+                                                </div>
+                                                <MedicationDetailsDialog medication={med} />
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </TabsContent>
                         <TabsContent value="medications">
                             <div className='bg-white border p-5 rounded-md mt-3'>
                                 <div className='mb-3'>
@@ -189,7 +234,7 @@ const MedicationsPage = () => {
                                         </TableRow>
                                     </TableHeader>
                                     <TableBody>
-                                        {medications.map((medication, index) => {
+                                        {filteredMedications.map((medication, index) => {
                                             return (
                                                 <TableRow key={index}>
                                                     <TableCell>{index + 1}</TableCell>
