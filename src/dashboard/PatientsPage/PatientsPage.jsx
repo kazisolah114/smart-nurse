@@ -1,9 +1,27 @@
-import React from 'react';
+"use client";
+import React, { useEffect, useState } from 'react';
 import FeatureHeader from '@/components/common/FeatureHeader';
 import PatientActions from './PatientActions';
 import PatientsFilter from './PatientsFilter';
+import PatientList from './PatientList';
+import axios from 'axios';
 
 const PatientsPage = () => {
+    const [patients, setPatients] = useState([]);
+    useEffect(() => {
+        const handleGetPatients = async () => {
+            try {
+                const response = await axios.get(`/data/patients.json`);
+                if (response.status === 200) {
+                    setPatients(response.data.patients);
+                }
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        handleGetPatients();
+    }, [])
+    console.log(patients);
     return (
         <div>
             <div className='flex items-center justify-between'>
@@ -11,6 +29,7 @@ const PatientsPage = () => {
                 <PatientActions />
             </div>
             <PatientsFilter />
+            <PatientList patients={patients} />
         </div>
     );
 };

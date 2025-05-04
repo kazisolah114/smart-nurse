@@ -1,0 +1,458 @@
+{
+    "patients": [
+        {
+            "id": "P001",
+            "name": "John Doe",
+            "age": 67,
+            "gender": "Male",
+            "room": 302,
+            "diagnosis": "Diabetes Type 2",
+            "status": "Stable",
+            "department": "Medical",
+            "admissionDate": "2023-05-10",
+            "vitals": {
+                "bp": "130/85",
+                "hr": 72,
+                "temperature": "98.6 F",
+                "respiratoryRate": 16
+            },
+            "allergies": [
+                "Penicillin"
+            ],
+            "medications": [
+                {
+                    "name": "Metformin",
+                    "dose": "500mg",
+                    "frequency": "Twice daily"
+                }
+            ],
+            "medicalHistory": [
+                "Hypertension",
+                "High Cholesterol"
+            ],
+            "notes": [
+                {
+                    "date": "2023-05-11",
+                    "note": "Patient responded well to initial insulin treatment."
+                }
+            ],
+            "careTeam": [
+                {
+                    "name": "Dr. Alice Bennett",
+                    "role": "Primary Physician"
+                },
+                {
+                    "name": "Nurse Mark Lane",
+                    "role": "Nurse"
+                }
+            ]
+        },
+        {
+            "id": "P002",
+            "name": "Maria Garcia",
+            "age": 54,
+            "gender": "Female",
+            "room": 305,
+            "diagnosis": "Pneumonia",
+            "status": "Improving",
+            "department": "Pulmonary",
+            "admissionDate": "2023-05-12",
+            "vitals": {
+                "bp": "122/78",
+                "hr": 80,
+                "temperature": "99.1 F",
+                "respiratoryRate": 18
+            },
+            "allergies": [],
+            "medications": [
+                {
+                    "name": "Azithromycin",
+                    "dose": "250mg",
+                    "frequency": "Once daily"
+                }
+            ],
+            "medicalHistory": [
+                "Asthma"
+            ],
+            "notes": [
+                {
+                    "date": "2023-05-13",
+                    "note": "Improved oxygen saturation, no fever."
+                }
+            ],
+            "careTeam": [
+                {
+                    "name": "Dr. Samuel Lin",
+                    "role": "Pulmonologist"
+                },
+                {
+                    "name": "Nurse Jenna Kim",
+                    "role": "Nurse"
+                }
+            ]
+        },
+        {
+            "id": "P003",
+            "name": "Robert Johnson",
+            "age": 72,
+            "gender": "Male",
+            "room": 215,
+            "diagnosis": "Congestive Heart Failure",
+            "status": "Critical",
+            "department": "Cardiology",
+            "admissionDate": "2023-05-08",
+            "vitals": {
+                "bp": "110/70",
+                "hr": 95,
+                "temperature": "98.2 F",
+                "respiratoryRate": 22
+            },
+            "allergies": [
+                "Aspirin"
+            ],
+            "medications": [
+                {
+                    "name": "Furosemide",
+                    "dose": "40mg",
+                    "frequency": "Once daily"
+                }
+            ],
+            "medicalHistory": [
+                "Diabetes Type 2",
+                "CAD"
+            ],
+            "notes": [
+                {
+                    "date": "2023-05-09",
+                    "note": "Monitoring fluid levels closely. Breathing support required."
+                }
+            ],
+            "careTeam": [
+                {
+                    "name": "Dr. Karen Fields",
+                    "role": "Cardiologist"
+                },
+                {
+                    "name": "Nurse Alex Chen",
+                    "role": "ICU Nurse"
+                }
+            ]
+        },
+        {
+            "id": "P004",
+            "name": "Emily Chen",
+            "age": 35,
+            "gender": "Female",
+            "room": 310,
+            "diagnosis": "Post-op Recovery (Appendectomy)",
+            "status": "Stable",
+            "department": "Surgical",
+            "admissionDate": "2023-05-14",
+            "vitals": {
+                "bp": "118/76",
+                "hr": 78,
+                "temperature": "98.7 F",
+                "respiratoryRate": 16
+            },
+            "allergies": [
+                "Latex"
+            ],
+            "medications": [
+                {
+                    "name": "Ibuprofen",
+                    "dose": "400mg",
+                    "frequency": "Every 6 hours"
+                }
+            ],
+            "medicalHistory": [],
+            "notes": [
+                {
+                    "date": "2023-05-15",
+                    "note": "Sutures clean, minimal swelling. Patient ambulating well."
+                }
+            ],
+            "careTeam": [
+                {
+                    "name": "Dr. Michael Reyes",
+                    "role": "Surgeon"
+                },
+                {
+                    "name": "Nurse Tina Park",
+                    "role": "Ward Nurse"
+                }
+            ]
+        },
+        {
+            "id": "P005",
+            "name": "James Wilson",
+            "age": 60,
+            "gender": "Male",
+            "room": 318,
+            "diagnosis": "COPD Exacerbation",
+            "status": "Stable",
+            "department": "Pulmonary",
+            "admissionDate": "2023-05-11",
+            "vitals": {
+                "bp": "125/80",
+                "hr": 82,
+                "temperature": "98.4 F",
+                "respiratoryRate": 20
+            },
+            "allergies": [
+                "Sulfa Drugs"
+            ],
+            "medications": [
+                {
+                    "name": "Albuterol",
+                    "dose": "Inhaler",
+                    "frequency": "As needed"
+                }
+            ],
+            "medicalHistory": [
+                "COPD",
+                "Smoking history"
+            ],
+            "notes": [
+                {
+                    "date": "2023-05-12",
+                    "note": "Pulmonary function improved after nebulizer therapy."
+                }
+            ],
+            "careTeam": [
+                {
+                    "name": "Dr. Olivia Grant",
+                    "role": "Pulmonologist"
+                },
+                {
+                    "name": "Nurse David Young",
+                    "role": "Respiratory Nurse"
+                }
+            ]
+        },
+        {
+            "id": "P006",
+            "name": "Sophia Patel",
+            "age": 29,
+            "gender": "Female",
+            "room": 221,
+            "diagnosis": "UTI",
+            "status": "Recovering",
+            "department": "Medical",
+            "admissionDate": "2023-05-13",
+            "vitals": {
+                "bp": "117/75",
+                "hr": 76,
+                "temperature": "99.5 F",
+                "respiratoryRate": 17
+            },
+            "allergies": [],
+            "medications": [
+                {
+                    "name": "Ciprofloxacin",
+                    "dose": "500mg",
+                    "frequency": "Twice daily"
+                }
+            ],
+            "medicalHistory": [
+                "Recurrent UTIs"
+            ],
+            "notes": [
+                {
+                    "date": "2023-05-14",
+                    "note": "Pain reduced, urination normalized."
+                }
+            ],
+            "careTeam": [
+                {
+                    "name": "Dr. Rachel Stein",
+                    "role": "Internist"
+                },
+                {
+                    "name": "Nurse Lily Tran",
+                    "role": "Nurse"
+                }
+            ]
+        },
+        {
+            "id": "P007",
+            "name": "Daniel Evans",
+            "age": 45,
+            "gender": "Male",
+            "room": 223,
+            "diagnosis": "Fractured Femur",
+            "status": "Post-Surgery",
+            "department": "Orthopedics",
+            "admissionDate": "2023-05-09",
+            "vitals": {
+                "bp": "128/82",
+                "hr": 84,
+                "temperature": "98.9 F",
+                "respiratoryRate": 18
+            },
+            "allergies": [
+                "Codeine"
+            ],
+            "medications": [
+                {
+                    "name": "Paracetamol",
+                    "dose": "1g",
+                    "frequency": "Every 8 hours"
+                }
+            ],
+            "medicalHistory": [
+                "None"
+            ],
+            "notes": [
+                {
+                    "date": "2023-05-10",
+                    "note": "Undergoing physiotherapy. Mobility improving."
+                }
+            ],
+            "careTeam": [
+                {
+                    "name": "Dr. Brian Cole",
+                    "role": "Orthopedic Surgeon"
+                },
+                {
+                    "name": "Nurse Hana Lee",
+                    "role": "Rehab Nurse"
+                }
+            ]
+        },
+        {
+            "id": "P008",
+            "name": "Ava Thompson",
+            "age": 50,
+            "gender": "Female",
+            "room": 208,
+            "diagnosis": "Migraine",
+            "status": "Stable",
+            "department": "Neurology",
+            "admissionDate": "2023-05-12",
+            "vitals": {
+                "bp": "120/70",
+                "hr": 70,
+                "temperature": "98.6 F",
+                "respiratoryRate": 16
+            },
+            "allergies": [
+                "None"
+            ],
+            "medications": [
+                {
+                    "name": "Sumatriptan",
+                    "dose": "50mg",
+                    "frequency": "As needed"
+                }
+            ],
+            "medicalHistory": [
+                "Chronic migraines"
+            ],
+            "notes": [
+                {
+                    "date": "2023-05-13",
+                    "note": "Responding to treatment, fewer episodes."
+                }
+            ],
+            "careTeam": [
+                {
+                    "name": "Dr. Ingrid Moore",
+                    "role": "Neurologist"
+                },
+                {
+                    "name": "Nurse Samuel Lee",
+                    "role": "Nurse"
+                }
+            ]
+        },
+        {
+            "id": "P009",
+            "name": "Michael Brown",
+            "age": 40,
+            "gender": "Male",
+            "room": 209,
+            "diagnosis": "Food Poisoning",
+            "status": "Recovering",
+            "department": "Gastroenterology",
+            "admissionDate": "2023-05-10",
+            "vitals": {
+                "bp": "115/76",
+                "hr": 74,
+                "temperature": "99.3 F",
+                "respiratoryRate": 17
+            },
+            "allergies": [],
+            "medications": [
+                {
+                    "name": "Ondansetron",
+                    "dose": "8mg",
+                    "frequency": "Every 12 hours"
+                }
+            ],
+            "medicalHistory": [],
+            "notes": [
+                {
+                    "date": "2023-05-11",
+                    "note": "Vomiting stopped. Rehydration successful."
+                }
+            ],
+            "careTeam": [
+                {
+                    "name": "Dr. Noah Lee",
+                    "role": "Gastroenterologist"
+                },
+                {
+                    "name": "Nurse Bella Cruz",
+                    "role": "Ward Nurse"
+                }
+            ]
+        },
+        {
+            "id": "P010",
+            "name": "Isabella Martinez",
+            "age": 58,
+            "gender": "Female",
+            "room": 206,
+            "diagnosis": "Rheumatoid Arthritis",
+            "status": "Managed",
+            "department": "Rheumatology",
+            "admissionDate": "2023-05-08",
+            "vitals": {
+                "bp": "119/77",
+                "hr": 75,
+                "temperature": "98.5 F",
+                "respiratoryRate": 16
+            },
+            "allergies": [
+                "NSAIDs"
+            ],
+            "medications": [
+                {
+                    "name": "Methotrexate",
+                    "dose": "15mg",
+                    "frequency": "Weekly"
+                }
+            ],
+            "medicalHistory": [
+                "Joint pain",
+                "Morning stiffness"
+            ],
+            "notes": [
+                {
+                    "date": "2023-05-09",
+                    "note": "Pain level decreased. Physical therapy ongoing."
+                }
+            ],
+            "careTeam": [
+                {
+                    "name": "Dr. Leila Nasser",
+                    "role": "Rheumatologist"
+                },
+                {
+                    "name": "Nurse Fiona Wallace",
+                    "role": "Specialist Nurse"
+                }
+            ]
+        }
+    ]
+}
