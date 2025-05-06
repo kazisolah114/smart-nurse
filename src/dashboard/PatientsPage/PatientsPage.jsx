@@ -5,6 +5,7 @@ import PatientActions from './PatientActions';
 import PatientsFilter from './PatientsFilter';
 import PatientList from './PatientList';
 import axios from 'axios';
+import PatientsUpdate from './PatientsUpdate';
 
 const PatientsPage = () => {
     const [patients, setPatients] = useState([]);
@@ -30,6 +31,7 @@ const PatientsPage = () => {
             </div>
             <PatientsFilter />
             <PatientList patients={patients} />
+            <PatientsUpdate patients={patients} />
         </div>
     );
 };

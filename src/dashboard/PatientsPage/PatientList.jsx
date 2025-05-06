@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const PatientList = ({ patients }) => {
+
     return (
         <div className='border bg-white rounded-md mt-10 p-3'>
             <Table>
@@ -37,7 +38,9 @@ const PatientList = ({ patients }) => {
                                 </TableCell>
                                 <TableCell>{patient.room}</TableCell>
                                 <TableCell>{patient.diagnosis}</TableCell>
-                                <TableCell>{patient.status}</TableCell>
+                                <TableCell>
+                                    <span className={`border rounded-full px-2 ${patient.status == "Stable" ? 'bg-green-500/15 border-green-500/30 text-green-700' : patient.status == "Improving" ? "bg-blue-500/15 border-blue-500/30 text-blue-700" : 'bg-red-500/15 border-red-500/30 text-red-700'}`}>{patient.status}</span>
+                                    </TableCell>
                                 <TableCell>{patient.department}</TableCell>
                                 <TableCell>{patient.admissionDate}</TableCell>
                                 <TableCell className={"text-right"}>
