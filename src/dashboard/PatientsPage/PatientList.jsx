@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { DotSquare } from 'lucide-react';
+import { DotSquare, Ellipsis } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
@@ -44,7 +44,7 @@ const PatientList = ({ patients }) => {
                                 <TableCell>{patient.department}</TableCell>
                                 <TableCell>{patient.admissionDate}</TableCell>
                                 <TableCell className={"text-right"}>
-                                    <Button variant={'ghost'}><DotSquare /></Button>
+                                    <Button variant={'ghost'} className={'cursor-pointer'}><Ellipsis /></Button>
                                 </TableCell>
                             </TableRow>
                         )
