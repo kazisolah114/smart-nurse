@@ -105,7 +105,7 @@ const MedicationsPage = () => {
                                                 <Clock className='w-5 h-5 text-yellow-500' />
                                                 Upcoming Medication
                                             </h3>
-                                            <p className='bg-yellow-500/10 border border-yellow-500 text-yellow-700 font-semibold rounded-full px-3 py-1 text-sm'>
+                                            <p className='bg-yellow-500/10 border border-yellow-500 text-yellow-700 font-semibold rounded-full px-3 py-1 text-xs'>
                                                 {upcomingMedications.length} Scheduled
                                             </p>
                                         </div>
@@ -147,9 +147,9 @@ const MedicationsPage = () => {
                                         <div className='flex justify-between items-center mb-5'>
                                             <h3 className='flex items-center gap-2 font-semibold sm:text-lg'>
                                                 <CheckCircle className='w-5 h-5 text-green-500' />
-                                                Administered Medication
+                                                Completed Medication
                                             </h3>
-                                            <p className='bg-green-500/10 border border-green-500 text-green-700 font-semibold rounded-full px-3 py-1 text-sm'>
+                                            <p className='bg-green-500/10 border border-green-500 text-green-700 font-semibold rounded-full px-3 py-1 text-xs'>
                                                 {administeredMedications.length} Completed
                                             </p>
                                         </div>
@@ -191,7 +191,7 @@ const MedicationsPage = () => {
                                             <h3 className='font-semibold sm:text-lg'>{patient}</h3>
                                             <p className='text-gray-600'>Number of medications {meds.length}</p>
                                         </div>
-                                        <p className='border rounded-full px-2 bg-gray-50'>
+                                        <p className='border rounded-full px-2 bg-gray-50 text-xs'>
                                             Room {[...new Set(meds.map(med => med.room))].join(', ')}
                                         </p>
                                     </div>

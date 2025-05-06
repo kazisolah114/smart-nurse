@@ -21,7 +21,7 @@ const Header = () => {
     return (
         <header className="flex px-5 py-4 border-b h-max sticky top-0 bg-white z-10">
             <div className='lg:ml-auto flex justify-between items-center w-full'>
-                <h2 className="lg:hidden text-emerald-600 font-semibold text-xl flex items-center gap-2">
+                <h2 className="lg:hidden text-teal-600 font-semibold text-xl flex items-center gap-2 cursor-pointer">
                     <PlusSquare className="h-7 w-7" /> Smart Nurse
                 </h2>
                 <div className="ml-auto flex items-center gap-4 relative top-1">
@@ -72,7 +72,7 @@ const Header = () => {
                     } flex flex-col`}
             >
                 <div className="border-b py-[18px] flex items-center justify-between px-3">
-                    <h2 className="lg:hidden text-emerald-600 font-semibold text-xl flex items-center gap-2">
+                    <h2 className="lg:hidden text-teal-600 font-semibold text-xl flex items-center gap-2 cursor-pointer">
                         <PlusSquare className="h-7 w-7" /> Smart Nurse
                     </h2>
                     <button onClick={() => setShowSidebar(false)} className='relative top-[2px]'>

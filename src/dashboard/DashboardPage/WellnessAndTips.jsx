@@ -38,7 +38,7 @@ const WellnessAndTips = () => {
                 </p>
                 <Button
                     onClick={() => setModalOpen(true)}
-                    className='w-full bg-teal-600 hover:bg-teal-700 text-white'
+                    className='w-full bg-teal-600 hover:bg-teal-700 text-white cursor-pointer'
                 >
                     Start Breathing Session
                 </Button>

@@ -19,15 +19,15 @@ const DashboardPage = () => {
     return (
         <>
             {/* Updates */}
-            <section className='bg-emerald-600 p-4 rounded-md'>
+            <section className='bg-teal-600 p-4 rounded-md'>
                 <div className='sm:flex items-center justify-between '>
                     <div>
                         <h3 className='text-2xl font-bold mb-1 text-white'>Welcome back, Sarah!</h3>
                         <p className='text-slate-100'>Monday, May 15 • Day Shift (7:00 AM - 7:00 PM)</p>
                     </div>
                     <div className='flex items-center gap-2 max-sm:mt-3'>
-                        <Button variant="ghost" className="rounded-sm cursor-pointer text-white bg-emerald-700 hover:bg-emerald-800 hover:text-white"><Calendar className='w-5 h-5' /> Today</Button>
-                        <Button variant="ghost" className="rounded-sm cursor-pointer text-white bg-emerald-700 hover:bg-emerald-800 hover:text-white"><MessageCircle className='w-5 h-5' /> New Message</Button>
+                        <Button variant="ghost" className="rounded-sm cursor-pointer text-white bg-teal-700 hover:bg-teal-800 hover:text-white"><Calendar className='w-5 h-5' /> Today</Button>
+                        <Button variant="ghost" className="rounded-sm cursor-pointer text-white bg-teal-700 hover:bg-teal-800 hover:text-white"><MessageCircle className='w-5 h-5' /> New Message</Button>
                     </div>
                 </div>
                 <div className='updates mt-8'>
