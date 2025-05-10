@@ -236,7 +236,7 @@
             "gender": "Female",
             "room": 221,
             "diagnosis": "UTI",
-            "status": "Recovering",
+            "status": "Improving",
             "department": "Medical",
             "admissionDate": "2023-05-13",
             "vitals": {
@@ -280,7 +280,7 @@
             "gender": "Male",
             "room": 223,
             "diagnosis": "Fractured Femur",
-            "status": "Post-Surgery",
+            "status": "Stable",
             "department": "Orthopedics",
             "admissionDate": "2023-05-09",
             "vitals": {
@@ -372,7 +372,7 @@
             "gender": "Male",
             "room": 209,
             "diagnosis": "Food Poisoning",
-            "status": "Recovering",
+            "status": "Critical",
             "department": "Gastroenterology",
             "admissionDate": "2023-05-10",
             "vitals": {
@@ -414,7 +414,7 @@
             "gender": "Female",
             "room": 206,
             "diagnosis": "Rheumatoid Arthritis",
-            "status": "Managed",
+            "status": "Improving",
             "department": "Rheumatology",
             "admissionDate": "2023-05-08",
             "vitals": {
